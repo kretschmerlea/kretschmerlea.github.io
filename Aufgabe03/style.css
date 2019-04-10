@@ -1,0 +1,22 @@
+/* style.css */
+body {
+    background-color: #ffbf00;
+}
+p {
+    font-size: 1,5em;
+    color: #084b8a;
+}
+section {
+    background-color: #9a2efe;
+    max-width: 60em;
+}
+article {
+    background-color: #ffbf00;
+    max-width: 30em;
+}
+img {
+    width: 50%;
+    height: auto;
+    border: 1px;
+    border-radius: 18px;
+}
