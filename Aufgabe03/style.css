@@ -6,6 +6,7 @@ p {
     font-size: 1,5em;
     color: #084b8a;}
 section {
+    border-radius: 18px;
     background-color: #9a2efe;
     max-width: 60em;}
 article {
