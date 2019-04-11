@@ -6,14 +6,15 @@ p {
     font-size: 1,5em;
     color: #084b8a;}
 section {
-    border-radius: 18px;
+    border-radius: 10px;
     background-color: #9a2efe;
     max-width: 60em;}
 article {
+    border-radius: 10px;
     background-color: #81bef7;
     max-width: 30em;}
 img {
     width: 30%;
     height: auto;
     border: 1px;
-    border-radius: 18px;}
+    border-radius: 10px;}
