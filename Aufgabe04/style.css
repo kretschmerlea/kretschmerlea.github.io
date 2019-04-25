@@ -2,19 +2,43 @@
 body {
     font-family: 'Lucida Sans';
     background-color: #ffbf00;}
+
+header {
+    width: 100%;
+    float: left;
+    background-color: #DF3A01;
+    border-radius: 10px;}
+
+main>section:nth-child(0+3n+1) {clear:left}
+{ 
+    width: 50%;
+    float: left;}
+
+aside {
+    width: 25%;
+    float: left;
+    height: 20em;
+    background-color: #81bef7;
+    border-radius: 10px}
 p {
     font-size: 1,5em;
     color: #084b8a;}
 section {
-    border-radius: 10px;
+    float: left;
     background-color: #9a2efe;
-    max-width: 60em;}
+    max-width: 10em;}
 article {
+    border: 1em;
     border-radius: 10px;
     background-color: #81bef7;
-    max-width: 30em;}
+    max-width: 8em;}
 img {
-    width: 30%;
+    width: 130px;
     height: auto;
     border: 1px;
+    border-radius: 10px;}
+footer {
+    width: 100%;
+    float:left;
+    background-color: #DF3A01;
     border-radius: 10px;}
