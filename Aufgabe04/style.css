@@ -1,7 +1,6 @@
 /* style.css */
 body {
-    font-family: 'Lucida Sans'
-    font-color: ;
+    font-family: 'Cooper Black';
     background-color: #ffbf00;}
 
 header {
@@ -9,8 +8,7 @@ header {
     float: left;
     background-image:url("https://kretschmerlea.github.io/Aufgabe04/that70sshow2.jpg");
     background-position: fixed;
-    border-radius: 10px;
-    color: #eeeeee}
+    border-radius: 10px;}
 
 main>section:nth-child(0+3n+1) {clear:left}
 { 
