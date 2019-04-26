@@ -11,19 +11,18 @@ header {
     border-radius: 10px;}
 { 
     width: 100%;
-    float: middle;}
 
 p {
     font-size: 1,5em;
     color: #084b8a;}
 section {
     background-color: #9a2efe;
-    max-width: 100%;}
+    width: 100%;}
 article {
     border: 1em;
     border-radius: 10px;
     background-color: #81bef7;
-    max-width: 100%;}
+    width: 100%;}
 img {
     width: 130px;
     height: auto;
