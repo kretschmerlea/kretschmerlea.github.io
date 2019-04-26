@@ -6,7 +6,7 @@ body {
 header {
     width: 100%;
     float: left;
-    background-color: #DF3A01;
+    background-image: -moz-element("https://kretschmerlea.github.io/Aufgabe02/thats70sshow1.jpg");
     border-radius: 10px;}
 
 main>section:nth-child(0+3n+1) {clear:left}
