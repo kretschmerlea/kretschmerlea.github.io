@@ -18,12 +18,12 @@ p {
     color: #084b8a;}
 section {
     background-color: #9a2efe;
-    max-width: 10em;}
+    max-width: 100%;}
 article {
     border: 1em;
     border-radius: 10px;
     background-color: #81bef7;
-    max-width: 8em;}
+    max-width: 100%;}
 img {
     width: 130px;
     height: auto;
