@@ -23,10 +23,10 @@ p {
 section {
     float: left;
     background-color: #9a2efe;
-    max-width: 10em;}
+    width: 100%;}
 
 img {
-    width: 100px;
+    width: 50%;
     height: auto;
     border: 1px;
     border-radius: 10px;}
