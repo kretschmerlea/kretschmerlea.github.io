@@ -11,7 +11,7 @@ header {
     background-position: fixed;
     border-radius: 10px;}
 
-main>img:nth-child(n+1) {clear:left}
+main>img:nth-child(0+1) {clear:left}
 { 
     width: 50%;
     float: left;}
@@ -26,7 +26,7 @@ section {
     width: 100%;}
 
 img {
-    width: 30%;
+    width: 25%;
     height: auto;
     border: 1px;
     border-radius: 10px;}
