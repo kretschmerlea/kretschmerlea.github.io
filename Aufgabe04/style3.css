@@ -26,6 +26,7 @@ section {
     width: 100%;}
 
 img {
+    float:left;
     width: 25%;
     height: auto;
     border: 1px;
