@@ -11,7 +11,7 @@ header {
     background-position: fixed;
     border-radius: 10px;}
 
-main>section:nth-child(0+3n+1) {clear:left}
+main>img:nth-child(0+3n+1) {clear:left}
 { 
     width: 50%;
     float: left;}
