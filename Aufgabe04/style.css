@@ -29,6 +29,7 @@ section {
     background-color: #9a2efe;
     max-width: 10em;}
 article {
+    margin: 1em;
     border: 1em;
     border-radius: 10px;
     background-color: #81bef7;
