@@ -28,7 +28,7 @@ section {
     float: left;
     background-color: #9a2efe;
     max-width: 10em;
-    height: 100%;}
+    height: fit-content;}
 
 h1 { 
     margin:1em;}
