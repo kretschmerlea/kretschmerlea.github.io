@@ -27,7 +27,9 @@ p {
 section {
     float: left;
     background-color: #9a2efe;
-    max-width: 10em;}
+    max-width: 10em;
+    height: 100%;}
+
 h1 { 
     margin:1em;}
 article {
