@@ -10,7 +10,7 @@ header {
     background-image:url("https://kretschmerlea.github.io/Aufgabe04/that70sshow2.jpg");
     background-position: fixed;
     border-radius: 10px;}
-
+main>section:nth-child(0+3n+1) {clear:left}
 main {
     width: 100%;
     float: left;}
@@ -24,7 +24,7 @@ section {
     background-color: #9a2efe;
     width: 100%;}
 
-main>section:nth-child(0+3n+1) {clear:left}
+
 img {
     margin: 1em;
     float:left;
