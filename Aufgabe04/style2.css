@@ -25,15 +25,18 @@ p {
     font-size: 1,5em;
     color: #084b8a;}
 section {
+    margin: 1em;
     float: left;
     background-color: #9a2efe;
     width: 100%;}
 article {
+    margin: 1em;
     border: 1em;
     border-radius: 10px;
     background-color: #81bef7;
     width: 100%;}
 img {
+    margin: 1em;
     width: 130px;
     height: auto;
     border: 1px;

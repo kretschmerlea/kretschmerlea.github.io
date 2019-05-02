@@ -12,7 +12,7 @@ header {
     border-radius: 10px;}
 
 main {
-    width: 50%;
+    width: 100%;
     float: left;}
 
 
@@ -24,7 +24,9 @@ section {
     background-color: #9a2efe;
     width: 100%;}
 
+main>img:nth-child(0+3n+1) {clear:left}
 img {
+    margin: 1em;
     float:left;
     width: 25%;
     height: auto;
