@@ -27,7 +27,8 @@ p {
 section {
     float: left;
     background-color: #9a2efe;
-    max-width: 10em;}
+    max-width: 10em;
+    border-radius: 10px;}
 
 h1 {
     margin: 1em;}
