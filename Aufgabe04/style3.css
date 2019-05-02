@@ -20,6 +20,7 @@ p {
     font-size: 1,5em;
     color: #084b8a;}
 section {
+    clear:left;
     float: left;
     background-color: #9a2efe;
     width: 100%;}
