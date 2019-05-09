@@ -1,0 +1,52 @@
+/* style2.css */
+body {
+    font-family: 'Cooper Black';
+    background-color: #ffbf00;}
+
+header {
+    width: 100%;
+    float: left;
+    background-image:url("https://kretschmerlea.github.io/Aufgabe04/that70sshow2.jpg");
+    background-position: fixed;
+    border-radius: 10px;}
+
+main>section:nth-child(0+3n+1) {clear:left}
+{ 
+    width: 50%;
+    float: left;}
+
+aside {
+    width: 25%;
+    float: left;
+    height: 20em;
+    background-color: #DF3A01;
+    border-radius: 10px}
+p {
+    font-size: 1,5em;
+    color: #084b8a;}
+section {
+    float: left;
+    background-color: #9a2efe;
+    width: 100%;}
+article {
+    margin: 1em;
+    border: 1em;
+    border-radius: 10px;
+    background-color: #81bef7;
+    width: 85%;}
+img {
+    margin: 1em;
+    width: 130px;
+    height: auto;
+    border: 1px;
+    border-radius: 10px;}
+footer {
+    width: 100%;
+    float:left;
+    background-color: #DF3A01;
+    border-radius: 10px;}
+
+
+
+
+    
