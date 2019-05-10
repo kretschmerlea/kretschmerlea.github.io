@@ -3,6 +3,39 @@ body {
     font-family: 'Cooper Black';
     background-color: #ffbf00;}
 
+    div {
+        width: 35px;
+        height: 5px;
+        background-color: magenta;
+        margin: 6px 0;
+        width: 50px;
+        -webkit-transition: width 2s height 2s; 
+        transition: width 2s height 2s;
+}
+
+div:hover {
+  width: 100px;
+  height: 10px;
+
+      }
+      nav{
+        transition: all 0.5s ease;
+        float: left;
+        margin-top: -2%;
+        height: 3em;
+        overflow: hidden;
+        
+    }
+    nav:hover{
+        height: 10em;
+    }
+    nav li{
+        position: relative;
+        font-size:1em;
+        background-color: #ffbf00;
+
+    
+    }
 header {
     width: 100%;
     float: left;
@@ -13,14 +46,16 @@ header {
 main>section:nth-child(0+3n+1) {clear:left}
 { 
     width: 50%;
-    float: left;}
+    float: left;
+    }
 
 aside {
     width: 25%;
     float: left;
     height: 20em;
     background-color: #DF3A01;
-    border-radius: 10px}
+    border-radius: 10px;
+    position: relative}
 p {
     font-size: 1,5em;
     color: #084b8a;}
