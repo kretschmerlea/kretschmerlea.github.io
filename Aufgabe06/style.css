@@ -109,7 +109,6 @@ footer {
             overflow: scroll;
             width: auto;
             float:left;
-            background-color: #cc0000
         }
     
         section:nth-of-type(n+1){
@@ -124,19 +123,17 @@ footer {
 
     @media screen and (max-width: 63em){
         aside{
-            height: 50%;
             width: 100%
         }
-        
-        }
-        /*(leider ändert sich bei mir nicht die Breite der Sections und ich weiß nicht woran es liegt*/
-        section{
-            
+        main{
             width: 100%;
+            margin-left: 20%;
+        }
+        section{
             height: 20em;
             overflow: scroll;
+            width: auto;
             float:left;
-            background-color: #ff0066
         }
     
     
