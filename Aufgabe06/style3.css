@@ -10,27 +10,17 @@ header {
     background-image:url("https://kretschmerlea.github.io/Aufgabe04/that70sshow2.jpg");
     background-position: fixed;
     border-radius: 10px;}
-main>section:nth-child(0+3n+1) {clear:left}
 main {
     width: 100%;
     float: left;}
 
 
-p {
-    font-size: 1,5em;
-    color: #084b8a;}
-section {
-    clear:left;
-    float: left;
-    background-color: #9a2efe;
-    width: 100%;}
-
-
-img {
+main>img:nth-child(n+1) {clear:left}
+img {position: relative;
     margin: 1em;
     float:left;
-    width: 10em;
-    height: auto;
+    width: auto;
+    height: 20em;
     border: 1px;
     border-radius: 10px;}
 footer {
@@ -38,3 +28,50 @@ footer {
     float:left;
     background-color: #DF3A01;
     border-radius: 10px;}
+
+    @media screen and (max-width: 36em){
+
+        aside{height: 50%;
+            width: 100%
+        }
+        main{
+            width: 36em;
+            margin-left: 20%;
+        }
+        section{
+            height: 15em;
+            overflow: auto;
+            width: 36em;
+            float:left;
+        }
+    
+        section:nth-of-type(n+1){
+            margin-left: 2%;
+        }
+    
+        section:first-of-type,section:nth-of-type(n+1){
+            margin-left: 0%;
+            clear:both;
+        }
+    }
+
+    @media screen and (max-width: 63em){
+        aside{height: 80%;
+            width: 100%
+        }
+        main{
+            width: 100%;
+            margin-left: 20%;
+        }
+        section{
+            height: 20em;
+            overflow: auto;
+            width: 63em;
+            float:left;
+        }
+    
+        section:first-of-type,section:nth-of-type(2n+1){
+            margin-left: 0%;
+            clear:both;
+        }
+    }
