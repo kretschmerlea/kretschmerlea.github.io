@@ -3,6 +3,40 @@ body {
     font-family: 'Cooper Black';
     background-color: #ffbf00;}
 
+    div {
+        width: 35px;
+        height: 5px;
+        background-color: magenta;
+        margin: 6px 0;
+        width: 50px;
+        -webkit-transition: width 2s height 2s; 
+        transition: width 2s height 2s;
+}
+
+div:hover {
+  width: 100px;
+  height: 10px;
+
+      }
+      nav{
+        transition: all 0.5s ease;
+        float: left;
+        margin-top: -2%;
+        height: 3em;
+        overflow: hidden;
+        
+    }
+    nav:hover{
+        height: 10em;
+    }
+    nav li{
+        position: relative;
+        font-size:1em;
+        background-color: #ffbf00;
+
+    
+    }
+
 header {
     width: 100%;
     float: left;
@@ -41,6 +75,7 @@ img {
     border: 1px;
     border-radius: 10px;}
 footer {
+    height: 10em;
     width: 100%;
     float:left;
     background-color: #DF3A01;
