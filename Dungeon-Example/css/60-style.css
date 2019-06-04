@@ -5,13 +5,12 @@
 /* Basic Styles */
 body {
 	font-size: 1.0em;
-	font-family: "Calibri", sans-serif;
+	font-family: "Courgette", sans-serif;
 }
 
 
 button > img {
 	margin: 0.5em auto;
-	color: #cc2e69;
 }
 
 h1 {
