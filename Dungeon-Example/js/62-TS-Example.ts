@@ -38,8 +38,8 @@ let playerXP : number = 0;    //Fehler: Variable wurde nicht genauer definiert, 
 let playerXPperLevel : number = 500;                                                // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
-let prefix : string[] = ["Fussel-", "Flauschige(s/r)", "Junge(s/r) ", "Feuerspeiende(s/r)-", " Wirbelde(s/r)", "Tanzende(s/r) "]; // length = 6, da 6 Einträge. Von 0-5.
-let monsterName : string[] = ["Monster", "Ungeheuer", "Viech", "Drache" , "Zombie"]; // length = 3, da 3 Einträge. Von 0-2.
+let prefix : string[] = ["Fussel-", "Flauschige(s/r) ", "Junge(s/r) ", "Feuerspeiende(s/r) ", " Wirbelde(s/r) ", "Tanzende(s/r) "]; // length = 6, da 6 Einträge. Von 0-5.
+let monsterName : string[] = ["Monster ", "Ungeheuer ", "Viech ", "Drache " , "Zombie "]; // length = 3, da 3 Einträge. Von 0-2.
 let suffix : string[] = [" des Untergangs", " aus dem Schwarzwald", " der Zerstörung", " mit Zauberkräften", " aus der Unterwelt", " mit Flügeln"]; // length = 6, da hier 6 Einträge sind. Von 0-5.
 
 let monsterModifers : string[] = ["Ist kein Frühaufsteher", "hat ein Alkoholproblem", "ist sehr verpeilt", "tanzt gerne Walzer", "leidet unter seinem/ihrem Übergewicht", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
