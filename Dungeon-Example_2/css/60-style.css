@@ -8,6 +8,7 @@ body {
 	font-family: "Courgette", sans-serif;
 }
 
+
 button > img {
 	margin: 0.5em auto;
 }
@@ -17,40 +18,10 @@ h1 {
 	margin-top: 2em;
 }
 
-.monster {
-	width: 20em;
-}
-
-.monster img {
-	width: 100%;
-}
-
-.monster button {
+main {
 	text-align: center;
-	display: block;
-	margin: auto;
 }
 
-.monster p {
-	text-align: center;
-	display: block;
-	margin: auto;
-}
-
-.monster p+p
-{
-  font-size: 0.7em;
-}
-
-main div {
-	display: inline-block;
-}
-
-/*
-main > div > img {
-	width: 100%;
-}
-*/
 
 button {
 
@@ -59,7 +30,6 @@ button {
   padding: 1em;
   overflow: hidden;
 
-	display: inline-block;
   width:10em; 	
 
   border-width: 0;
@@ -70,10 +40,8 @@ button {
   background-color: #2ecc71;
   color: #ecf0f1;
   
-  margin: auto;
-	/*! text-align: center; */
+  margin: 0.5em;
   
-  /*! float: left; */
 }
 
 #button-green {

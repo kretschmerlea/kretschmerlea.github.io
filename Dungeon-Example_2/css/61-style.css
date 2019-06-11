@@ -22,7 +22,8 @@ h1 {
 }
 
 .monster img {
-	width: 100%;
+	width: 20px;
+	max-height: auto;
 }
 
 .monster button {
