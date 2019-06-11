@@ -5,7 +5,7 @@
 /* Basic Styles */
 body {
 	font-size: 1.0em;
-	font-family: Arial, Helvetica, sans-serif
+	font-family: "Courgette", sans-serif;
 }
 
 button > img {
@@ -22,8 +22,7 @@ h1 {
 }
 
 .monster img {
-	width: 20em;
-	height: auto
+	width: 100%;
 }
 
 .monster button {
