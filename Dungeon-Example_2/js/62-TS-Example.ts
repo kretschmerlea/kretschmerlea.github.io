@@ -177,11 +177,7 @@ function push() {
     console.log(ArrayPush);
 }
  
-/**
-* Markus Heupel
-* Implementierter Code: damit ersichtlich is was neu gecoded wurde ^^ - kannst du löschen wenn dus nicht mehr brauchst
-*
-**/
+
 function clearMonsterCell(){
     let monsterCell = document.getElementById('monsterHoldingCell');    // hole html-element indem die monster enthalten sind. 
     while (monsterCell.firstChild) {                                    // -> solange durchführen bis keine monster mehr in monsterCell sind
@@ -189,22 +185,14 @@ function clearMonsterCell(){
     }
 }
  
-/**
-* Markus Heupel
-* Implementierter Code: damit ersichtlich is was neu gecoded wurde ^^ - kannst du löschen wenn dus nicht mehr brauchst
-*
-**/
+
 function updateHTML(){
     clearMonsterCell();                                                 // steht so in der Aufgabe - simpler methodenaufruf
     monsterGenerateHTMLAll();                                           // steht so in der Aufgabe - simpler methodenaufruf
     getMonsterCount();                                                  // steht so in der Aufgabe - simpler methodenaufruf
 }
  
-/**
-* Markus Heupel
-* Implementierter Code: damit ersichtlich is was neu gecoded wurde ^^ - kannst du löschen wenn dus nicht mehr brauchst
-*
-**/
+
 function getMonsterCount(){
     console.log('Anzahl der Monster: ' + monsterArray.length);          // gebe anzahl der aktuellen monster in console aus
     let count = document.createElement("p");                            // Generiere html-element
