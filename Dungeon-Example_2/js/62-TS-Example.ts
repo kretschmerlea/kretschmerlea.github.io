@@ -58,11 +58,7 @@ function generateMonster() {
     updateHTML();
 }
  
-/**
-* Markus Heupel
-* Implementierter Code: damit ersichtlich is was neu gecoded wurde ^^ - kannst du löschen wenn dus nicht mehr brauchst
-*
-**/
+
 function monsterGenerateHTMLAll() {
     let i = 1;                                                  // counter für while schleife (initialisiert mit 1 weil dann die monster id bei 1 beginnen und nicht bei 0)
     while(i <= monsterArray.length){                         // solange counter kleiner oder gleich der anzahl der monster
