@@ -227,5 +227,6 @@ function getMonsterCount() {
     let count = document.createElement("p"); // Generiere html-element
     count.innerHTML = 'Anzahl der Monster: ' + monsterArray.length; // inhalt des elements
     document.getElementById(monsterHolder).appendChild(count); // in monster container einfügen
+    return monsterArray.length;
 }
 //# sourceMappingURL=62-TS-Example.js.map

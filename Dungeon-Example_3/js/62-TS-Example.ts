@@ -259,9 +259,10 @@ function updateHTML(){
 }
  
 
-function getMonsterCount(){
+function getMonsterCount(): number{
     console.log('Anzahl der Monster: ' + monsterArray.length);          // gebe anzahl der aktuellen monster in console aus
     let count = document.createElement("p");                            // Generiere html-element
     count.innerHTML = 'Anzahl der Monster: ' + monsterArray.length;     // inhalt des elements
     document.getElementById(monsterHolder).appendChild(count);          // in monster container einfügen
+    return monsterArray.length;
 }
