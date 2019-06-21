@@ -239,6 +239,6 @@ function updatePlayerLevel()
 let newMonsters = "New Monsters"
 function push()
 {
-    ArrayPush.push(newMonsters);
-    console.log(ArrayPush);
+    //ArrayPush.push(newMonsters);
+    //console.log(ArrayPush);
 }
