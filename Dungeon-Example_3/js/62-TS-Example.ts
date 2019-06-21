@@ -232,6 +232,10 @@ function updatePlayerLevel() {
     if (playerLevel == 20) {
         alert ("Du hast gewonnen!")
     }
+
+    if (playerLevel < 0) {
+        alert ("Du hast verloren!")
+    }
 }
 let newMonsters = "New Monsters";
 function push() {
