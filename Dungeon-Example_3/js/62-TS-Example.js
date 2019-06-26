@@ -1,4 +1,5 @@
 // INSGESAMT EINGEBAUTE FEHLER bei den Variablen: I (1 / einer)
+console.log ("Spieler hat zu Beginn Level 4")
 let monsterHolder = "monsterHoldingCell"; // ID für das Haupt-Element, in welchem die Monster sich befinden werden. Wird vielleicht mehrfach in dem Skript gebraucht, deshalb einmalig definitiert.
 let playerName = "Spielername"; // Ein paar globale Variablen, welche den Spieler darstellen.
 let playerXP = 2000; //Fehler: Variable wurde nicht genauer definiert, kein eigentlicher Wert zugewiesen                                                      // Stellt die gesammelte Erfahrung des Spielers dar.
@@ -182,14 +183,16 @@ function generateMonsterAge() {
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
 function fightMonster(_index) {
-    console.log("Spieler kämpft gegen Monster und gewinnt!"); // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
+    // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     //console.log("Das Monster weigert sich zu verschwinden."); // Wird nächste Stunde erweitert.
     if (playerLevel > monsterArray[_index].monsterLevel) {
         playerXP += monsterArray[_index].monsterExperience; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-        monsterArray.splice(_index, 1);
+        monsterArray.splice(_index, 1); 
+        console.log("Spieler kämpft gegen Monster und gewinnt!");
     } // monster aus dem array entfernen
     else if (playerLevel < monsterArray[_index].monsterLevel) {
         playerXP -= monsterArray[_index].monsterExperience;
+        console.log("Spieler kämpft gegen Monster und verliert!")
     }
     updatePlayerLevel();
     updateHTML();
@@ -201,9 +204,13 @@ function updatePlayerLevel() {
     console.log("Spieler " + playerName + " hat nun Level " + playerLevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)"); // Spieler-Level in der Konsole.
     if (playerLevel == 20) {
         alert("Du hast gewonnen!");
+        console.log("Winner!");
+        location.reload();
     }
-    if (playerLevel < 0) {
+    if (playerLevel <= 0) {
         alert("Du hast verloren!");
+        console.log("Loser!");
+        location.reload();
     }
 }
 let newMonsters = "New Monsters";

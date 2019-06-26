@@ -207,16 +207,17 @@ function generateMonsterAge() {
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
 function fightMonster(_index : number) {
-    console.log("Spieler kämpft gegen Monster und gewinnt!"); // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
+     // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     //console.log("Das Monster weigert sich zu verschwinden."); // Wird nächste Stunde erweitert.
     if (playerLevel > monsterArray[_index].monsterLevel) {
         playerXP += monsterArray[_index].monsterExperience; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-     
+     console.log("Spieler kämpft gegen Monster und gewinnt!");
     
         monsterArray.splice(_index,1); 
     }                                     // monster aus dem array entfernen
     else if (playerLevel < monsterArray[_index].monsterLevel) {
         playerXP -= monsterArray[_index].monsterExperience;
+        console.log("Spieler kämpft gegen Monster und verliert!");
     }
     updatePlayerLevel();
     
@@ -228,12 +229,13 @@ function updatePlayerLevel() {
     playerLevel = Math.floor(playerXP / playerXPperLevel); // Spieler-Level = XP / XPproLevel
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + playerLevel + " (XP: " + playerXP + " / " + playerXPperLevel * /*multiplizieren statt addieren*/ (playerLevel + 1) + ")"; // Baue den String für die Spieler-Info zusammen
     console.log("Spieler " + playerName + " hat nun Level " + playerLevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)"); // Spieler-Level in der Konsole.
-
+    
     if (playerLevel == 20) {
         alert ("Du hast gewonnen!")
+        location.reload();
     }
-
-    if (playerLevel < 0) {
+    
+    if (playerLevel <= 0) {
         alert ("Du hast verloren!")
     }
 }
