@@ -60,7 +60,7 @@ function shuffle(array) {
  * @returns {*}
  */
 function generateCardHTML(card) {
-    let visibility = card.deck === decks.PLAYER || card.deck === decks.PLAYED ? 'visible' : 'visible';
+    let visibility = card.deck === decks.PLAYER || card.deck === decks.PLAYED ? 'visible' : 'hidden';
     let html = '<div class="card '+ visibility + ' ' + card.color + '" data-number="' + card.number + '" data-color="' + card.color + '"><span><h1>' + card.number + '</h1></span></div>';
     let dom = $.parseHTML(html)[0];                                                                                     // generiere DOM-Element aus HTML-String
  
