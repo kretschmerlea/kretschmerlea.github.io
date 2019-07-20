@@ -1,0 +1,2 @@
+define(["require","exports","react"],function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.CoachmarkTarget=function(e){return e.target===e.name?i.createElement("div",{ref:function(t){if(t&&!e.positions.target){var i=t.getBoundingClientRect();e.updatePosition({width:i.width,height:i.height,x:i.left,y:i.top})}}},e.children):i.Children.count(e.children)>0?i.createElement("div",null,e.children):null}});
+//# sourceMappingURL=coachmark_target.min.js-vflpWMRzc.map

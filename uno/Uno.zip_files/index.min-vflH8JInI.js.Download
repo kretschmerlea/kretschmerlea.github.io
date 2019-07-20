@@ -1,0 +1,2 @@
+define(["require","exports","spectrum_comments/coachmark_location/coachmark_location","spectrum_comments/coachmark_location/coachmark_target","spectrum_comments/coachmark_location/types","spectrum_comments/coachmark_location/arrow"],function(a,o,c,r,t,e){"use strict";Object.defineProperty(o,"__esModule",{value:!0}),o.CoachmarkLocation=c.CoachmarkLocation,o.CoachmarkTarget=r.CoachmarkTarget,o.CoachmarkLocations=t.CoachmarkLocations,o.CoachmarkTargets=t.CoachmarkTargets,o.Arrow=e.Arrow});
+//# sourceMappingURL=index.min.js-vflQztVXD.map
