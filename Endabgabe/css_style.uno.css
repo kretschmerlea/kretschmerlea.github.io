@@ -9,7 +9,7 @@
 #opponent,#player{
     min-width: 40%;
     max-width: 90%;
-    overflow: scroll;
+    overflow: auto;
 }
 #opponent .card,#player .card{
     max-width:100px;
@@ -87,9 +87,10 @@
 }
 .hidden{
     background: #000000;
-    background-image: url("https://kretschmerlea.github.io/Endabgabe/uno.JPG");
+    background-image: url("https://kretschmerlea.github.io/Endabgabe/uno.JPG")
 }
 .hidden h1{
     display:none;
+    
 }
 
