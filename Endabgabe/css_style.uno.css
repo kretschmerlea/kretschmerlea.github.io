@@ -13,7 +13,8 @@
 }
 #opponent .card,#player .card{
     max-width:100px;
- 
+
+
 }
 #deck,#playedDeck{
     display: inline-block;
@@ -85,7 +86,8 @@
     background: rgba(0,0,0,0.3);
 }
 .hidden{
-    background: #ff8e8b;
+    background: #000000;
+    background-image: url("https://kretschmerlea.github.io/Endabgabe/uno.JPG");
 }
 .hidden h1{
     display:none;
