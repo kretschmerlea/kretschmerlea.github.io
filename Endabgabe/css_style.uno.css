@@ -1,70 +1,20 @@
-#wrapper{
+body{
     background: lightgrey;
-    height:100vh;
+    font-family: Courier, serif;
+    margin:0;
 }
 #header{
     background:grey;
-    height:80px;
-}
-#opponent,#player{
-    min-width: 40%;
-    max-width: 90%;
-    overflow: auto;
-}
-#opponent .card,#player .card{
-    max-width:100px;
-
-
-}
-#deck,#playedDeck{
-    display: inline-block;
-}
-#decks{
-    width: 100%;
-}
-#decks #playedDeck{
-    width: auto;
-    margin-right: auto;
-    margin-left: auto;
-}
-#playedDeck .card{
-    display: inline-block;
-    margin:20px;
-}
-#decks #deck{
-    position: absolute;
-    right:10%;
-}
-#playedDeck{
-    width:50%;
-    margin-left:auto;
-    margin-right:auto;
-}
-#deck .card,#playedDeck .card{
-    margin:10px;
-}
-.section{
- 
-    border-radius: 20px;
-    margin-top:50px;
-    background:rgba(255,255,255,0.3);
-    padding:30px;
-}
-.card{
-    height:150px;
-    width:100px;
-    float: left;
-    margin:10px;
     text-align: center;
-    line-height: 200px;
-    border-radius: 10px;
+    padding:15px;
+    margin-bottom:50px;
+    color:#fff;
+    font-family: Arial, serif;
 }
-.card h1{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    color: #fff;
+#wrapper{
+    width:80%;
+    margin:0 auto;
+    position: relative;
 }
 .red{
     background: #ff4234;
@@ -78,19 +28,45 @@
 .yellow{
     background: #ffda58;
 }
-.over{
-    width:100%;
-    height:100%;
-    color:white;
-    z-index:99;
-    background: rgba(0,0,0,0.3);
-}
 .hidden{
     background: #000000;
-    background-image: url("https://kretschmerlea.github.io/Endabgabe/uno.JPG")
+    background-image: url("https://kretschmerlea.github.io/Endabgabe/uno.JPG");
 }
 .hidden h1{
     display:none;
-    
 }
+.section{
+    width: 100%;
+    float: left;
+    padding:30px;
+    display: inline-block;
+    text-align: center;
+}
+.section > div,#deck,#playedDeck{
+    display: inline-block;
+    min-height: 170px;
+}
+.right{
+    position: absolute;
+    right:0;
+    float: left;
+}
+#opponent,#deck,#player,#playedDeck{
+    background: rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding:15px;
+    min-width:45%;
+}
+.card{
+    width:100px;
+    height:150px;
+    float: left;
+    margin:10px;
+    border-radius: 10px;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 

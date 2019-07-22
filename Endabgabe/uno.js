@@ -61,24 +61,29 @@ function shuffle(array) {
  */
 function generateCardHTML(card) {
     let visibility = card.deck === decks.PLAYER || card.deck === decks.PLAYED ? 'visible' : 'hidden';
-    let html = '<div class="card '+ visibility + ' ' + card.color + '" data-number="' + card.number + '" data-color="' + card.color + '"><span><h1>' + card.number + '</h1></span></div>';
-    let dom = $.parseHTML(html)[0];                                                                                     // generiere DOM-Element aus HTML-String
+    let div = document.createElement('div');
+    div.setAttribute('class', 'card ' + visibility + ' ' + card.color);
+    div.setAttribute('data-number', card.number);
+    div.setAttribute('data-color', card.color);
+    let h1 = document.createElement('h1');
+    h1.innerText = card.number;
+    div.appendChild(h1);
  
     if (card.deck === decks.PLAYER)                                                                                     // wenn gespielte Karte aus dem Deck des Spielers ist
-        $(dom).click(function () {                                                                                      // onClick-Event
+        div.addEventListener('click', function () {                                                                                      // onClick-Event
             function findCard(cardInPlayer) {                                                                           // Hilfsfunktion um die geklickte Karte beim Spieler zu finden
-                return cardInPlayer.number === parseInt($(dom).attr('data-number')) && cardInPlayer.color === $(dom).attr('data-color'); // hole Informationen Nummer und Farbe aus HTML-Element und vergleiche mit Karte
+                return cardInPlayer.number === parseInt(div.getAttribute('data-number')) && cardInPlayer.color === div.getAttribute('data-color'); // hole Informationen Nummer und Farbe aus HTML-Element und vergleiche mit Karte
             }
  
             if (playerTurn)
                 playCard(player[player.findIndex(findCard)]);                                                           // spiele Karte aus player
         });
     else if (card.deck === decks.DECK)
-        $(dom).click(function () {
+        div.addEventListener('click', function () {
             if (playerTurn && checkPossibleCards(player).length === 0)                                                  // überprüfe ob Karten spielbar sind, wenn nicht kann gezogen werden
                 getCard(decks.PLAYER);
         });
-    return dom;
+    return div;
 }
  
 /**
@@ -191,17 +196,18 @@ function updateBoard() {
     while (div.hasChildNodes()) {
         div.removeChild(div.lastChild);
     }
-    for (let i in opponent) {
-        div.appendChild(generateCardHTML(opponent[i]));
-    }
+    opponent.forEach(function (card) {
+        div.appendChild(generateCardHTML(card));
+    });
  
     // update player
     div = document.getElementById("player");
     while (div.hasChildNodes()) {
         div.removeChild(div.lastChild);
     }
-    for (let i in player)
-        div.appendChild(generateCardHTML(player[i]));
+    player.forEach(function (card) {
+        div.appendChild(generateCardHTML(card));
+    });
  
     // update deck
     div = document.getElementById("deck");
@@ -271,7 +277,6 @@ function init() {
     gameLoop = setInterval(gameplay, 1000);                                                                     // Game Loop - wiederholde Spielzug solange bis player oder opponent leer ist
 }
  
-$(document).ready(function () {                                                                                         // starte Script wenn das Dokument fertig geladen ist
+document.addEventListener('DOMContentLoaded', function () {
     init();
 });
-
