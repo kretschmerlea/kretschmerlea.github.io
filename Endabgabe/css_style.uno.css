@@ -63,10 +63,17 @@ body{
     float: left;
     margin:10px;
     border-radius: 10px;
+    border-color: #fff;
+    border-width: 5px;
+    border-style: solid;
     color:#fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
     display:flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 10px 15px #333;
 }
+
 
 
