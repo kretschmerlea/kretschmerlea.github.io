@@ -1,0 +1,78 @@
+body{
+    background: lightgrey;
+    font-family: Courier, serif;
+    margin:0;
+}
+#header{
+    background:grey;
+    text-align: center;
+    padding:15px;
+    margin-bottom:50px;
+    color:#fff;
+    font-family: Arial, serif;
+}
+#wrapper{
+    width:80%;
+    margin:0 auto;
+    position: relative;
+}
+.red{
+    background: #ff4234;
+}
+.green{
+    background: #5caf54;
+}
+.blue{
+    background: #3a50ff;
+}
+.yellow{
+    background: #ffda58;
+}
+.hidden{
+    background: #000000;
+    background-image: url("https://kretschmerlea.github.io/Endabgabe/uno.JPG");
+}
+.hidden h1{
+    display:none;
+}
+.section{
+    width: 100%;
+    float: left;
+    padding:30px;
+    display: inline-block;
+    text-align: center;
+}
+.section > div,#deck,#playedDeck{
+    display: inline-block;
+    min-height: 170px;
+}
+.right{
+    position: absolute;
+    right:0;
+    float: left;
+}
+#opponent,#deck,#player,#playedDeck{
+    background: rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding:15px;
+    min-width:45%;
+}
+.card{
+    width:100px;
+    height:150px;
+    float: left;
+    margin:10px;
+    border-radius: 10px;
+    border-color: #fff;
+    border-width: 5px;
+    border-style: solid;
+    color:#fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 10px 15px #333;
+}
+
+
