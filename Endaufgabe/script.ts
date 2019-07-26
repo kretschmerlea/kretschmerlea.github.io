@@ -1,27 +1,26 @@
-var gameLoop;
-var deck;
-var opponent;
-var player;
-var playedDeck;
-var playerTurn;
-var decks = {
+let gameLoop: any;
+let opponent: any;
+let player: any;
+let playedDeck: any;
+let playerTurn: any;
+let decks = {
     PLAYER: 1,
     OPPONENT: 2,
     PLAYED: 3,
     DECK: 4
 };
 /**
- * Karteninterface
- * @param number
- * @param color
- * @param deck
- * @constructor
- */
-function Card(number, color, deck) {
+ * Karteninterface */
+ let number: any;
+ let color: any;
+ let deck: any;
+ let constructor: any;
+
+function Card(number: any, color: any, deck: any) {
     this.number = number;
     this.color = color;
     this.deck = deck;
-    this.setDeck = function (e) {
+    this.setDeck = function (e: any) {
         this.deck = e;
         return this;
     };
@@ -31,7 +30,7 @@ function Card(number, color, deck) {
  * @param number = let 8
  * @param colors = ['red','green','blue']
  */
-function createCards(number, colors) {
+function createCards(number: any, colors: any) {
     for (var i = 1; i < number + 1; i++)
         for (var j = 0; j < colors.length; j++) {
             var card = new Card(i, colors[j], decks.DECK);
@@ -43,7 +42,7 @@ function createCards(number, colors) {
  * @param array
  * @returns {*}
  */
-function shuffle(array) {
+function shuffle(array: any) {
     var _a;
     for (var i = 0; i < array.length; i++) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -56,7 +55,7 @@ function shuffle(array) {
  * @param card
  * @returns {*}
  */
-function generateCardHTML(card) {
+function generateCardHTML(card: any) {
     var visibility = card.deck === decks.PLAYER || card.deck === decks.PLAYED ? 'visible' : 'hidden';
     var div = document.createElement('div');
     div.setAttribute('class', 'card ' + visibility + ' ' + card.color);
@@ -67,7 +66,7 @@ function generateCardHTML(card) {
     div.appendChild(h1);
     if (card.deck === decks.PLAYER) // wenn gespielte Karte aus dem Deck des Spielers ist
         div.addEventListener('click', function () {
-            function findCard(cardInPlayer) {
+            function findCard(cardInPlayer: any) {
                 return cardInPlayer.number === parseInt(div.getAttribute('data-number')) && cardInPlayer.color === div.getAttribute('data-color'); // hole Informationen Nummer und Farbe aus HTML-Element und vergleiche mit Karte
             }
             if (playerTurn)
@@ -84,7 +83,7 @@ function generateCardHTML(card) {
  * Karte ziehen
  * @param who // wer zieht die Karte, Spieler oder Computer
  */
-function getCard(who) {
+function getCard(who: any) {
     if (who === decks.PLAYER) {
         player.push(deck.pop().setDeck(decks.PLAYER));
         updateBoard();
@@ -100,19 +99,19 @@ function getCard(who) {
  * Karte spielen
  * @param card
  */
-function playCard(card) {
+function playCard(card: any) {
     var playedCard = playedDeck[playedDeck.length - 1];
     if (playerTurn) { // wenn Spieler dran ist
         if (card.number === playedCard.number || card.color === playedCard.color) { // ist gespielte Karte möglich ?
             playedDeck.push(card.setDeck(decks.PLAYED)); // Karte gespieltem Stapel hinzufügen
-            player.splice(player.findIndex(function (c) { return c === card; }), 1); // Karte beim Spieler suchen und entfernen - findIndex: durchläuft player und überprüft ob c (Karte in player) gleich card (gespielte Karte) ist und gibt den index von c in player zurück. danach splice funktion
+            player.splice(player.findIndex(function (c: any) { return c === card; }), 1); // Karte beim Spieler suchen und entfernen - findIndex: durchläuft player und überprüft ob c (Karte in player) gleich card (gespielte Karte) ist und gibt den index von c in player zurück. danach splice funktion
             updateBoard(); // aktualisieren
             playerTurn = false; // Computer ist dran
         }
     }
     else { // wenn Computer dran ist
         playedDeck.push(card.setDeck(decks.PLAYED)); // Karte gespieltem Stapel hinzufügen
-        opponent.splice(opponent.findIndex(function (c) { return c === card; }), 1); // Karte beim Computer suchen und entfernen
+        opponent.splice(opponent.findIndex(function (c: any) { return c === card; }), 1); // Karte beim Computer suchen und entfernen
         updateBoard();
         playerTurn = true;
     }
@@ -122,11 +121,11 @@ function playCard(card) {
  * @param possibleCards
  * @returns {Array}
  */
-function opponentLogic(possibleCards) {
-    var bestPossibleCards = [];
+function opponentLogic(possibleCards: any) {
+    var bestPossibleCards: any = [];
     var isBestPossibleCard = false;
-    possibleCards.forEach(function (card) {
-        player.forEach(function (playerCard) {
+    possibleCards.forEach(function (card: any) {
+        player.forEach(function (playerCard: any) {
             isBestPossibleCard = !(card.number === playerCard.number) && !(card.color === playerCard.color); // wenn sowohl Farbe als auch Nummer nicht übereinstimmen
         });
         if (isBestPossibleCard)
@@ -138,10 +137,10 @@ function opponentLogic(possibleCards) {
  * Überprüfen welche Karten spielbar sind
  * @param deck
  */
-function checkPossibleCards(deck) {
-    var possibleCards = [];
+function checkPossibleCards(deck: any) {
+    var possibleCards: any = [];
     var playedCard = playedDeck[playedDeck.length - 1];
-    deck.forEach(function (card) {
+    deck.forEach(function (card: any) {
         if (card.number === playedCard.number || card.color === playedCard.color) { // Überprüfe welche Karten können gespielt werden (Farbe oder Nummer)
             possibleCards.push(card);
         }
@@ -180,13 +179,13 @@ function getDeck() {
  * Aktualisieren des Spielbretts
  */
 function updateBoard() {
-    var div;
+    var div: any;
     // update opponent
     div = document.getElementById("opponent");
     while (div.hasChildNodes()) {
         div.removeChild(div.lastChild);
     }
-    opponent.forEach(function (card) {
+    opponent.forEach(function (card: any) {
         div.appendChild(generateCardHTML(card));
     });
     // update player
@@ -194,7 +193,7 @@ function updateBoard() {
     while (div.hasChildNodes()) {
         div.removeChild(div.lastChild);
     }
-    player.forEach(function (card) {
+    player.forEach(function (card: any) {
         div.appendChild(generateCardHTML(card));
     });
     // update deck

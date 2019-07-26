@@ -1,22 +1,20 @@
-var gameLoop;
-var deck;
-var opponent;
-var player;
-var playedDeck;
-var playerTurn;
-var decks = {
+let gameLoop;
+let opponent;
+let player;
+let playedDeck;
+let playerTurn;
+let decks = {
     PLAYER: 1,
     OPPONENT: 2,
     PLAYED: 3,
     DECK: 4
 };
 /**
- * Karteninterface
- * @param number
- * @param color
- * @param deck
- * @constructor
- */
+ * Karteninterface */
+let number;
+let color;
+let deck;
+let constructor;
 function Card(number, color, deck) {
     this.number = number;
     this.color = color;
