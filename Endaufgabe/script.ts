@@ -1,29 +1,25 @@
 let gameLoop: any;
-let opponent: any;
-let player: any;
-let playedDeck: any;
-let playerTurn: any;
-let decks = {
-    PLAYER: 1,
-    OPPONENT: 2,
-    PLAYED: 3,
-    DECK: 4
-};
-/**
- * Karteninterface */
- let number: any;
- let color: any;
- let deck: any;
- let constructor: any;
-
-function Card(number: any, color: any, deck: any) {
-    this.number = number;
-    this.color = color;
-    this.deck = deck;
-    this.setDeck = function (e: any) {
-        this.deck = e;
+let playerTurn: boolean = true;
+let player: any, opponent: any, deck: any, playedDeck: Card[];
+enum decks {                                                                                                           // Enum: bildet Strings auf Integers ab -> zur Vereinfachung um welchees Deck es sich handelt
+    PLAYER = 1,
+    OPPONENT,
+    PLAYED,
+    DECK
+}
+class Card{
+    number : number;
+    color : string;
+    deck : number;
+    constructor(number : number, color : string, deck : number){
+        this.number = number;
+        this.color = color;
+        this.deck = deck;
+    }
+    setDeck(deck: any){
+        this.deck = deck;
         return this;
-    };
+    }
 }
 /**
  * Karten generieren

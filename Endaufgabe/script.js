@@ -1,28 +1,23 @@
 let gameLoop;
-let opponent;
-let player;
-let playedDeck;
-let playerTurn;
-let decks = {
-    PLAYER: 1,
-    OPPONENT: 2,
-    PLAYED: 3,
-    DECK: 4
-};
-/**
- * Karteninterface */
-let number;
-let color;
-let deck;
-let constructor;
-function Card(number, color, deck) {
-    this.number = number;
-    this.color = color;
-    this.deck = deck;
-    this.setDeck = function (e) {
-        this.deck = e;
+let playerTurn = true;
+let player, opponent, deck, playedDeck;
+var decks;
+(function (decks) {
+    decks[decks["PLAYER"] = 1] = "PLAYER";
+    decks[decks["OPPONENT"] = 2] = "OPPONENT";
+    decks[decks["PLAYED"] = 3] = "PLAYED";
+    decks[decks["DECK"] = 4] = "DECK";
+})(decks || (decks = {}));
+class Card {
+    constructor(number, color, deck) {
+        this.number = number;
+        this.color = color;
+        this.deck = deck;
+    }
+    setDeck(deck) {
+        this.deck = deck;
         return this;
-    };
+    }
 }
 /**
  * Karten generieren
